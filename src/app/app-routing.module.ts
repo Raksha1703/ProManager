@@ -4,13 +4,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FacultyComponent } from './faculty/faculty.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { SettingComponent } from './setting/setting.component';
 
 
 const routes: Routes = [
-  {path:'dashboard', component:DashboardComponent},
-  {path:'/', component:LoginComponent},
+  {path: '', redirectTo: '/login' , pathMatch: 'full'},
+  {path:'login', component:LoginComponent},
   {path:'register', component:RegisterComponent},
-  {path:'faculty', component:FacultyComponent}
+  {path:'dashboard', component:DashboardComponent},
+  {path:'faculty', component:FacultyComponent},
+  {path: 'setting', component:SettingComponent}
 ];
 
 @NgModule({

@@ -10,6 +10,8 @@ import { RegisterComponent } from './register/register.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { StudentComponent } from './student/student.component';
 import { FacultyComponent } from './faculty/faculty.component';
+import { AddfacultyComponent } from './faculty/addfaculty/addfaculty.component';
+import { SettingComponent } from './setting/setting.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { FacultyComponent } from './faculty/faculty.component';
     RegisterComponent,
     TopbarComponent,
     StudentComponent,
-    FacultyComponent
+    FacultyComponent,
+    AddfacultyComponent,
+    SettingComponent
   ],
   imports: [
     BrowserModule,
