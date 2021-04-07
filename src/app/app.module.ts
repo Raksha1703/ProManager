@@ -12,6 +12,9 @@ import { StudentComponent } from './student/student.component';
 import { FacultyComponent } from './faculty/faculty.component';
 import { AddfacultyComponent } from './faculty/addfaculty/addfaculty.component';
 import { SettingComponent } from './setting/setting.component';
+import { ProjectComponent } from './project/project.component';
+import { AddprojectComponent } from './project/addproject/addproject.component';
+import { OpenproComponent } from './project/openpro/openpro.component';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { SettingComponent } from './setting/setting.component';
     StudentComponent,
     FacultyComponent,
     AddfacultyComponent,
-    SettingComponent
+    SettingComponent,
+    ProjectComponent,
+    AddprojectComponent,
+    OpenproComponent
   ],
   imports: [
     BrowserModule,
