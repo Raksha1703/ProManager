@@ -30,6 +30,92 @@
                 <div class="row">
                     <div class="col-md-10 offset-md-1 mt-3">                        
                         <form>
+                            <h5>Basic Information</h5>
+                            <hr>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                  <label for="firstname">First Name</label>
+                                  <input type="text" name="firstname" placeholder="First Name" class="form-control" id="firstname">
+                                </div>
+                                <div class="form-group col-md-4">
+                                  <label for="middelname">Middel Name</label>
+                                  <input type="text" name="middelname" placeholder="Middel Name" class="form-control" id="middelname">
+                                </div>
+                                <div class="form-group col-md-4">
+                                  <label for="lastname">Last Name</label>
+                                  <input type="text" name="lastname" placeholder="Last Name" class="form-control" id="lastname">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                  <label for="address">Address</label>
+                                  <textarea class="form-control rounded-0" id="textarea" name="address" type="address" rows="5"></textarea>
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <div class="form-group">
+                                      <label>Gender</label>
+                                      <div class="row ml-1">
+                                          <label class="radio-inline"> 
+                                              <input type="radio"  name="gender">Female
+                                          </label>
+                                          <label class="radio-inline ml-1">
+                                              <input type="radio" name="gender">Male
+                                          </label>
+                                      </div>
+                                  </div>
+                                  <div class="row ml-1">
+                                      <label for="phonenumber">Phone number</label>
+                                      <input type="text" name="phonenumber" placeholder="Phone number" class="form-control" id="phonenumber">
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                  <label for="city">city</label>
+                                  <select id="city" class="form-control" name="city">
+                                    <option selected>city...</option>
+                                    <option>...</option>
+                                  </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                  <label for="state">State</label>
+                                  <select id="state" class="form-control" name="state">
+                                    <option selected>State...</option>
+                                    <option>...</option>
+                                  </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                  <label for="country">Country</label>
+                                  <select id="country" class="form-control" name="country">
+                                    <option selected>Country...</option>
+                                    <option>...</option>
+                                  </select>
+                                </div>                  
+                            </div>
+                            <div class="form-row">                                
+                                <div class="form-group col-md-4">
+                                  <label for="semester">Semester</label>
+                                  <select id="semester"  class="form-control" name="semester">
+                                    <option selected>Semester...</option>
+                                    <option>...</option> 
+                                  </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="status">Status</label>
+                                    <select id="semester"  class="form-control" name="semester">
+                                        <option selected>Status...</option>
+                                        <option>...</option> 
+                                      </select>
+                                  </div>
+                                <div class="form-group col-md-4">
+                                  <label for="technology">Technology</label>
+                                  <select id="technology" class="form-control" name="tech">
+                                    <option selected>Technology...</option>
+                                    <option>...</option>
+                                  </select>
+                                </div>                  
+                            </div>
+
                             <h5>Email</h5>
                             <hr>
                             <div class="form-group col-md-10 offset-md-1">
@@ -54,10 +140,9 @@
                                         <label for="Password">Reset Password</label>
                                         <input type="password" name="resetpassword" class="form-control" id="Password1">
                                     </div>
-                                </div>
-                                <div class="container">
+                                </div>                               
                                     <div class="row">
-                                      <div class="col-md-6 offset-md-3">
+                                      <div class="col-md-8 offset-md-3">
                                         <h6 class="text-muted font-weight-bold">Password requirements:</h6>
                                         <ul style="list-style-type:disc">
                                           <li>Ensure that these requirements are met:</li>
@@ -68,9 +153,7 @@
                                           </ul>
                                         </ul>      
                                       </div>                                      
-                                    </div>
-                                  </div>
-                                                            
+                                    </div>                                                              
                             </div>                            
                             <div class="float-right">
                                 <button type="submit" class="btn btn-outline-primary">Save Changes</button>
