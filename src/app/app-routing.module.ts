@@ -20,6 +20,7 @@ const routes: Routes = [
   {path: 'student', component:StudentComponent},
   {path:'project', component:ProjectComponent},
   {path: 'projectview', component:OpenproComponent}
+  
 ];
 
 @NgModule({
