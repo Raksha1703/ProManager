@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'setting', component:SettingComponent},
   {path: 'student', component:StudentComponent},
   {path:'project', component:ProjectComponent},
-  {path: 'projectview', component:OpenproComponent}
+  {path: 'project/view', component:OpenproComponent}
   
 ];
 

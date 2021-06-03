@@ -15,6 +15,7 @@ import { SettingComponent } from './setting/setting.component';
 import { ProjectComponent } from './project/project.component';
 import { AddprojectComponent } from './project/addproject/addproject.component';
 import { OpenproComponent } from './project/openpro/openpro.component';
+import { AddstudentComponent } from './student/addstudent/addstudent.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { OpenproComponent } from './project/openpro/openpro.component';
     SettingComponent,
     ProjectComponent,
     AddprojectComponent,
-    OpenproComponent
+    OpenproComponent,
+    AddstudentComponent
   ],
   imports: [
     BrowserModule,
