@@ -11,83 +11,87 @@
                 </button>
               </div>
               <div class="modal-body col-md-10 offset-md-1">
-                <form>
+                <form [formGroup]="facultyForm" (ngSubmit)="save()">
                   <div class="form-row">
                     <div class="form-group col-md-4">
                       <label for="firstname">First Name</label>
-                      <input type="text" name="firstname" placeholder="First Name" class="form-control" id="firstname">
+                      <input type="text" name="firstname" formControlName="fname" placeholder="First Name" class="form-control" id="firstname">
                     </div>
                     <div class="form-group col-md-4">
                       <label for="middelname">Middel Name</label>
-                      <input type="text" name="middelname" placeholder="Middel Name" class="form-control" id="middelname">
+                      <input type="text" name="middelname" formControlName="mname" placeholder="Middel Name" class="form-control" id="middelname">
                     </div>
                     <div class="form-group col-md-4">
                       <label for="lastname">Last Name</label>
-                      <input type="text" name="lastname" placeholder="Last Name" class="form-control" id="lastname">
+                      <input type="text" name="lastname" formControlName="lname" placeholder="Last Name" class="form-control" id="lastname">
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="address">Address</label>
-                      <textarea class="form-control rounded-0" id="textarea" name="address" type="address" rows="5"></textarea>
+                      <textarea class="form-control rounded-0" id="textarea" name="address" formControlName="address" type="address" rows="5"></textarea>
                     </div>
                     <div class="form-group col-md-6">
                       <div class="form-group">
                           <label>Gender</label>
                           <div class="row ml-1">
                               <label class="radio-inline"> 
-                                  <input type="radio"  name="gender">Female
+                                  <input type="radio"  name="gender" formControlName="gender">Female
                               </label>
                               <label class="radio-inline ml-1">
-                                  <input type="radio" name="gender">Male
+                                  <input type="radio" name="gender" formControlName="gender">Male
                               </label>
                           </div>
                       </div>
                       <div class="row ml-1">
                           <label for="phonenumber">Phone number</label>
-                          <input type="text" name="phonenumber" placeholder="Phone number" class="form-control" id="phonenumber">
+                          <input type="text" name="phonenumber" formControlName="phonenumber" placeholder="Phone number" class="form-control" id="phonenumber">
                       </div>
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-4">
                       <label for="city">city</label>
-                      <select id="city" class="form-control" name="city">
+                      <select id="city" class="form-control" name="city" formControlName="city">
                         <option selected>city...</option>
-                        <option>...</option>
+                        <option>Jamnagar</option>
+                        <option>Rajkot</option>
+                        <option>Amdavad</option>
+                        <option>Surat</option>
+                        <option>Baroda</option>
                       </select>
                     </div>
                     <div class="form-group col-md-4">
                       <label for="state">State</label>
-                      <select id="state" class="form-control" name="state">
+                      <select id="state" class="form-control" name="state" formControlName="state">
                         <option selected>State...</option>
-                        <option>...</option>
+                        <option>Gujrat</option>
                       </select>
                     </div>
                     <div class="form-group col-md-4">
                       <label for="country">Country</label>
-                      <select id="country" class="form-control" name="country">
+                      <select id="country" class="form-control" name="country" formControlName="country">
                         <option selected>Country...</option>
-                        <option>...</option>
+                        <option>India</option>
                       </select>
                     </div>                  
                   </div>
                   <div class="form-row">
                       <div class="form-group col-md-4">
                         <label for="clgname">College Name</label>
-                        <input type="text" name="clgname" placeholder="College Name" class="form-control" id="clgname">
+                        <input type="text" name="clgname" formControlName="clgname" placeholder="College Name" class="form-control" id="clgname">
                   
                       </div>
                       <div class="form-group col-md-4">
                         <label for="qualification">Qualification</label>
-                        <select id="qualification"  class="form-control" name="qualification">
+                        <select id="qualification"  class="form-control" name="qualification" formControlName="qualification">
                           <option selected>Qualification...</option>
                           <option>...</option> 
                         </select>
                       </div>
                       <div class="form-group col-md-4">
                         <label for="technology">Technology</label>
-                        <select id="technology" class="form-control" name="tech">
+                        <select id="technology" class="form-control" name="technology" formControlName="technology">
                           <option selected>Technology...</option>
                           <option>...</option>
                         </select>
@@ -96,11 +100,11 @@
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="email">Email</label>
-                      <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
+                      <input type="email" name="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp">
                     </div>
                     <div class="form-group col-md-6">
                       <label for="status">Status</label>
-                          <select id="status" class="form-control" name="status">
+                          <select id="status" class="form-control" name="status" formControlName="status">
                             <option selected>status...</option>
                             <option>...</option>
                           </select>
@@ -110,29 +114,33 @@
                     <div class="form-row">
                     <div class="form-group col-md-4">
                       <label for="birthdate">Birth Date:</label>
-                      <input type="date" id="birthdate" name="birthdate" class="form-control">   
+                      <input type="date" id="birthdate" name="bod" formControlName="bod" class="form-control">   
                     </div>
                     <div class="form-group col-md-4">
                       <label>Avtar</label>  
                       <div class="custom-file">
-                          <input type="file" class="custom-file-input" name="avtar" id="avtar">
+                          <input type="file" class="custom-file-input" name="avtar" formControlName="avtar" id="avtar">
                           <label class="custom-file-label" for="avtar" aria-describedby="inputGroupFileAddon02">Choose Photo</label>
                       </div>
                     </div>
                     <div class="form-group col-md-4">
                       <label>Cover Photo</label>  
                       <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="coverphoto">
+                          <input type="file" class="custom-file-input" name="cover" formControlName="cover" id="coverphoto">
                           <label class="custom-file-label" for="coverphoto" aria-describedby="inputGroupFileAddon02">Choose Photo</label>
                       </div>
                     </div>
                   </div>                    
-              </form>
+                  <div class="modal-footer justify-content-center">
+                    <button type="submit" class="btn btn-outline-primary mr-2" >Save</button>
+                    <button type="button" class="btn btn-outline-secondary">Cancle</button>
+            </div>
+              
+                </form>
               </div>
-              <div class="modal-footer justify-content-center">
-                <button type="button" class="btn btn-outline-primary mr-2">Save</button>
-                      <button type="button" class="btn btn-outline-secondary">Cancle</button>
-              </div>
+              <h5>Data: {{ facultyForm.value | json }}</h5>
+              
+              
             </div>
           </div>
         </div>            

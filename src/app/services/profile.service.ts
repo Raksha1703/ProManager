@@ -23,7 +23,7 @@ export class ProfileService {
   delete(id){
     return this.http.delete<any>(this.url+ 'profile/' +id);
   }
-  // create(data){    
-  //     return this.http.post<any>(this.url+ 'profile' ,data);
-  // }
+  create(data){    
+      return this.http.post<any>(this.url+ 'profile' ,data);
+  }
 }
