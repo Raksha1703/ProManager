@@ -14,7 +14,7 @@
         <!-- Main Content -->
         <div id="content">
 
-           
+           <!-- {{ users | json}} -->
             <!-- Begin Page Content -->
             <div class="container-fluid mt-5">
 
@@ -33,31 +33,74 @@
                             <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th>Faculty Name</th>
-                                        <th>Student Name</th>
-                                        <th>Project Name</th>
+                                        <th>FacultyName</th>
+                                        <th>DateOfBirth</th>
+                                        <th>Address</th>
+                                        <th>City</th>
+                                        <th>State</th>
+                                        <th>Country</th>
+                                        <th>Gender</th>
+                                        <th>PhoneNumber</th>
+                                        <th>Semester</th>
+                                        <th>CollegeName</th>
+                                        <th>Course</th>
+                                        <th>Qualification</th>
                                         <th>Technology</th>
+                                        <th>Cover</th>
+                                        <th>Avtar</th>
+                                        <th>Role</th>                                        
+                                        <th>Pid</th>
                                         <th>Status</th>
+                                        <th>Email</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tfoot>
                                     <tr>
-                                        <th>Faculty Name</th>
-                                        <th>Student Name</th>
-                                        <th>Project Name</th>
+                                        <th>FacultyName</th>
+                                        <th>DateOfBirth</th>
+                                        <th>Address</th>
+                                        <th>City</th>
+                                        <th>State</th>
+                                        <th>Country</th>
+                                        <th>Gender</th>
+                                        <th>PhoneNumber</th>
+                                        <th>Semester</th>
+                                        <th>CollegeName</th>
+                                        <th>Course</th>
+                                        <th>Qualification</th>
                                         <th>Technology</th>
+                                        <th>Cover</th>
+                                        <th>Avtar</th>
+                                        <th>Role</th>                                        
+                                        <th>Pid</th>
                                         <th>Status</th>
+                                        <th>Email</th>
                                         <th>Action</th>
                                     </tr>
                                 </tfoot>
-                                <tbody>
-                                    <tr *ngFor= "let card of [1,2,3,4]">
-                                        <td scope="row">Mr.Raj Dave</td>
-                                        <td>Ms. Kiran Parmar</td>
-                                        <td>Restaurant Management System</td>
-                                        <td>Laravel</td>
-                                        <td>Active</td> 
+                                <tbody *ngIf="users">
+                                    
+                                    <tr  *ngFor="let user of users">
+                                        <td scope="row">{{ user.name }}</td>
+                                        <td>{{ user.dob }}</td>
+                                        <td>{{ user.address }}</td>
+                                        <td>{{ user.city }}</td>
+                                        <td>{{ user.state }}</td>
+                                        <td>{{ user.country }}</td>
+                                        <td>{{ user.gender }}</td>
+                                        <td>{{ user.phonenumber }}</td>
+                                        <td>{{ user.semester }}</td>
+                                        <td>{{ user.clgname }}</td>
+                                        <td>{{ user.course }}</td>
+                                        <td>{{ user.qualification }}</td>
+                                        <td>{{ user.technology }}</td>
+                                        <td><img src="https://picsum.photos/150/90?random={{ user.id}}" alt=""></td>
+                                        <td>{{ user.avtar }}</td>
+                                        <td>{{ user.role }}</td>
+                                        <td>{{ user.pid }}</td>
+                                        <td>{{ user.status }}</td> 
+                                        <td>{{ user.email }}</td>                                       
                                         <td>                                                     
                                                 <a href="#">
                                                     <img src="assets/img/Admin/eye-fill.svg"/>
