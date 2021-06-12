@@ -3,6 +3,7 @@ import { ProfileService } from 'src/app/services/profile.service';
 import { Profile } from 'src/app/model/profile';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-faculty',
   templateUrl: './faculty.component.html',
@@ -10,22 +11,27 @@ import { Observable } from 'rxjs';
 })
 export class FacultyComponent implements OnInit {
   
-  constructor(private profileservice:ProfileService,
+  constructor(private httpClient:HttpClient,
+              private profileservice:ProfileService,
               private route:ActivatedRoute) { }
 
   //public users$:Observable<object>;
   public users : any;
   ngOnInit(): void {    
+    this.getUser();
+  }
+  getUser(){
     this.profileservice.getAll()
        .subscribe((res:any) => {
          this.users = res.faculty;
          console.log(res.faculty)});
      ;
-    // this.users$ = this.profileservice.getData();
-    // this.profileservice.getData()
-    //    .subscribe((response) => {
-    //     console.log('OBSERVE "response" RESPONSE is ', response);
-    //    });
   }
-
+  deleteItem(user){
+    this.profileservice.delete(user.id)
+        .subscribe((res:any) => {
+          console.log(res);
+          this.getUser();
+        });
+  }
 }

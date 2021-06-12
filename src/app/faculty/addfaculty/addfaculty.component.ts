@@ -12,4 +12,10 @@ export class AddfacultyComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // save(){
+  //   var data={
+  //     pid:1,
+  //     name:
+  //   };
+  // }
 }
