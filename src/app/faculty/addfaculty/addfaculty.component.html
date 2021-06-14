@@ -11,7 +11,7 @@
                 </button>
               </div>
               <div class="modal-body col-md-10 offset-md-1">
-                <form [formGroup]="facultyForm" (ngSubmit)="save()">
+                <form [formGroup]="facultyForm" (ngSubmit)="save(facultyForm)">
                   <div class="form-row">
                     <div class="form-group col-md-4">
                       <label for="firstname">First Name</label>
@@ -86,14 +86,20 @@
                         <label for="qualification">Qualification</label>
                         <select id="qualification"  class="form-control" name="qualification" formControlName="qualification">
                           <option selected>Qualification...</option>
-                          <option>...</option> 
+                          <option>M.C.A</option> 
+                          <option>M.Sc(it&ca)</option> 
+                          <option>B.C.A</option> 
                         </select>
                       </div>
                       <div class="form-group col-md-4">
                         <label for="technology">Technology</label>
                         <select id="technology" class="form-control" name="technology" formControlName="technology">
                           <option selected>Technology...</option>
-                          <option>...</option>
+                          <option>Laravel</option>
+                          <option>PHP</option>
+                          <option>Angular</option>
+                          <option>Python</option>
+                          <option>Android</option>
                         </select>
                       </div>                  
                   </div>
@@ -106,7 +112,7 @@
                       <label for="status">Status</label>
                           <select id="status" class="form-control" name="status" formControlName="status">
                             <option selected>status...</option>
-                            <option>...</option>
+                            <option>Active</option>
                           </select>
                                            
                   </div>
@@ -114,7 +120,7 @@
                     <div class="form-row">
                     <div class="form-group col-md-4">
                       <label for="birthdate">Birth Date:</label>
-                      <input type="date" id="birthdate" name="bod" formControlName="bod" class="form-control">   
+                      <input type="date" id="birthdate" name="dob" formControlName="dob" class="form-control">   
                     </div>
                     <div class="form-group col-md-4">
                       <label>Avtar</label>  

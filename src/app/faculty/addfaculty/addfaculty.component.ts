@@ -1,16 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-
-
+import { Profile } from 'src/app/model/profile';
+import { ProfileService } from 'src/app/services/profile.service';
 @Component({
   selector: 'app-addfaculty',
   templateUrl: './addfaculty.component.html',
   styleUrls: ['./addfaculty.component.scss']
 })
 export class AddfacultyComponent implements OnInit {
-
+  
+  //private user:Profile;
   public facultyForm: FormGroup;
-  constructor(private fb:FormBuilder) { 
+  public message = null;
+    
+  constructor(private fb:FormBuilder,
+    private profileservice: ProfileService) { 
       this.createData();
   }
   
@@ -33,17 +37,34 @@ export class AddfacultyComponent implements OnInit {
       technology:[null],
       email:[null],
       status:[null],
-      bod:[null],
-      avtar:[null],
-      cover:[null],
-      pid:5
+      dob:[null],
+      semester:6,
+      course:"M.C.A",
+      avtar:"/dfgdg/abc.png",
+      cover:"/dsf/gdb.jpg",
+      pid:5,
+      role:1
     });
   }
 
-  save(){
-    //this.facultyForm.pid=5;
-    console.log('Form Value', this.facultyForm.value);
-
-    //console.log("hi");
+  save(facultyForm){
+    var data = this.facultyForm.value;
+    data.name = data.fname + " " + data.mname + " " + data.lname;
+    console.log(data);
+    console.log(this.facultyForm.value);
+    if (facultyForm.valid) {
+      this.profileservice.create(data)
+      .subscribe((result:any) => {
+        this.message = result.msg;
+        this.createData();
+      }, (err) => {
+        this.message = err.msg;
+      });      
+    }
+    else {
+     console.error('From is in an invalid state');
+    }
+    //console.log('Form Value', this.facultyForm.value);
   }
+
 }
