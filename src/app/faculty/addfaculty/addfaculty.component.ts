@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { Profile } from 'src/app/model/profile';
+//import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+
 import { ProfileService } from 'src/app/services/profile.service';
 @Component({
   selector: 'app-addfaculty',
@@ -14,7 +15,8 @@ export class AddfacultyComponent implements OnInit {
   public message = null;
     
   constructor(private fb:FormBuilder,
-    private profileservice: ProfileService) { 
+    private profileservice: ProfileService,
+    ) { 
       this.createData();
   }
   
@@ -67,4 +69,5 @@ export class AddfacultyComponent implements OnInit {
     //console.log('Form Value', this.facultyForm.value);
   }
 
+  
 }

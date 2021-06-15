@@ -18,6 +18,7 @@ import { ProjectComponent } from './project/project.component';
 import { AddprojectComponent } from './project/addproject/addproject.component';
 import { OpenproComponent } from './project/openpro/openpro.component';
 import { AddstudentComponent } from './student/addstudent/addstudent.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { AddstudentComponent } from './student/addstudent/addstudent.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
